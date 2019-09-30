@@ -11,7 +11,7 @@
         android:layout_height="match_parent">
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="THis program is create by"
@@ -24,7 +24,7 @@
 
         <TextView
             android:textSize="20dp"
-            android:id="@+id/textView2"
+            android:id="@+id/textName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Rivaldo Setyo Purnomo"
