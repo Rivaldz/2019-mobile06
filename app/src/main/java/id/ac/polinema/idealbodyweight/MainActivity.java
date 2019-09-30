@@ -9,13 +9,17 @@ import android.view.MenuItem;
 import android.widget.Button;
 
 import id.ac.polinema.idealbodyweight.fragments.AboutFragment;
+import id.ac.polinema.idealbodyweight.fragments.BrocaIndexFragment;
 import id.ac.polinema.idealbodyweight.fragments.MenuFragment;
 
-public class MainActivity extends AppCompatActivity implements MenuFragment.OnFragmentInteractionListener {
+public class MainActivity extends AppCompatActivity implements
+		MenuFragment.OnFragmentInteractionListener,
+		BrocaIndexFragment.OnFragmentInteractionListener {
 
 	// Deklarasikan atribut Fragment di sini
 	private AboutFragment aboutFragment ;
 	private MenuFragment menuFragment;
+	private BrocaIndexFragment brocaIndexFragment;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +31,7 @@ public class MainActivity extends AppCompatActivity implements MenuFragment.OnFr
 		getSupportFragmentManager().beginTransaction()
 				.replace(R.id.fragment_container, menuFragment)
 				.commit();
+		brocaIndexFragment = new BrocaIndexFragment();
 	}
 
 	@Override
@@ -55,6 +60,11 @@ public class MainActivity extends AppCompatActivity implements MenuFragment.OnFr
 
 	@Override
 	public void onBodyMassIndexButtonClick() {
+
+	}
+
+	@Override
+	public void onCalculateBrocaIndexClickerd(float index) {
 
 	}
 }
