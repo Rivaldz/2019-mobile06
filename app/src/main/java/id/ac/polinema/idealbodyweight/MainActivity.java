@@ -55,7 +55,9 @@ public class MainActivity extends AppCompatActivity implements
 
 	@Override
 	public void onBrocaIndexButtonClicked() {
-
+		getSupportFragmentManager().beginTransaction()
+				.replace(R.id.fragment_container, brocaIndexFragment)
+				.commit();
 	}
 
 	@Override
