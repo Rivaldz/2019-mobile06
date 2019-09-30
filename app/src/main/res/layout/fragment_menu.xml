@@ -11,7 +11,7 @@
         android:layout_height="match_parent">
 
         <Button
-            android:id="@+id/broca_index"
+            android:id="@+id/button_broca_index"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Broca Index"
@@ -29,7 +29,7 @@
             />
 
         <Button
-            android:id="@+id/body_master_index"
+            android:id="@+id/button_body_master_index"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="BODY mass index"

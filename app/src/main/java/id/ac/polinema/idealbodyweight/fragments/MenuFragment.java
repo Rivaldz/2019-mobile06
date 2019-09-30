@@ -9,6 +9,9 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+
+import java.io.BufferedReader;
 
 import id.ac.polinema.idealbodyweight.R;
 
@@ -32,8 +35,28 @@ public class MenuFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_menu, container, false);
+        Button brocaButton = view.findViewById(R.id.button_broca_index);
+        Button bmiButton = view.findViewById(R.id.button_body_master_index);
 
         //sisipkan
+//        return  view;
+        brocaButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (mListener != null){
+                    mListener.onBrocaIndexButtonClicked();
+                }
+
+            }
+        });
+        bmiButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (mListener != null){
+                    mListener.onBodyMassIndexButtonClick();
+                }
+            }
+        });
         return  view;
     }
 
