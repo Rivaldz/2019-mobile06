@@ -9,8 +9,9 @@ public class BodyMassIndex {
     private int height;
     private float index;
 
-    public  BodyMassIndex( int height){
+    public  BodyMassIndex( int height, int mass){
 //        this.gender = gender;
+        this.mass = mass;
         this.height = height;
         this.index = calcuate();
     }
@@ -19,7 +20,8 @@ public class BodyMassIndex {
         return index;
     }
     private float calcuate(){
-       return (mass/ (height * height));
+        float calculate = (mass / (height * height));
+        return  calculate;
 
         }
     }

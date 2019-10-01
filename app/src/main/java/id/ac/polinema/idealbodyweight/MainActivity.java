@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity implements
 	private MenuFragment menuFragment;
 	private BrocaIndexFragment brocaIndexFragment;
 	private ResultFragment resultFragment;
+	private BodyMassIndexFragment bodyMassIndexFragment;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +39,7 @@ public class MainActivity extends AppCompatActivity implements
 
 		brocaIndexFragment = new BrocaIndexFragment();
 		resultFragment = new ResultFragment();
+		bodyMassIndexFragment = new BodyMassIndexFragment();
 
 
 	}
@@ -71,12 +73,16 @@ public class MainActivity extends AppCompatActivity implements
 
 	@Override
 	public void onBodyMassIndexButtonClick() {
+		getSupportFragmentManager().beginTransaction()
+				.replace(R.id.fragment_container,bodyMassIndexFragment )
+				.addToBackStack(null)
+				.commit();
 
 	}
 
 	@Override
 	public void onCalculateBrocaIndexClickerd(float index) {
-		resultFragment.setInformation(String.format("Your ideal weight is %.2f kg",index));
+		resultFragment.setInformation(String.format(null,index));
 		getSupportFragmentManager().beginTransaction()
 				.replace(R.id.fragment_container,resultFragment)
 				.commit();
@@ -93,6 +99,10 @@ public class MainActivity extends AppCompatActivity implements
 
 	@Override
 	public void onCalculateBodyMassIndex(float index) {
+		resultFragment.setInformation(String.format("Your BMI is %.2f kg", index));
+		getSupportFragmentManager().beginTransaction()
+				.replace(R.id.fragment_container,resultFragment)
+				.commit();
 
 	}
 }

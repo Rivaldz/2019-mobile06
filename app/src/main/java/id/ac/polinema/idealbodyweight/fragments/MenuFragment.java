@@ -49,6 +49,7 @@ public class MenuFragment extends Fragment {
 
             }
         });
+
         bmiButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

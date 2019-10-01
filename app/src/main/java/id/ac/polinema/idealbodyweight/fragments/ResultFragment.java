@@ -26,6 +26,7 @@ public class ResultFragment extends Fragment {
     String information;
 
     public  void setInformation(String information){
+
         this.information = information;
     }
 
@@ -41,6 +42,7 @@ public class ResultFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_result, container, false);
         TextView informationText = view.findViewById(R.id.text_information);
         informationText.setText(information);
+
         Button tryAgainButton = view.findViewById(R.id.button_try_again);
         tryAgainButton.setOnClickListener(new View.OnClickListener() {
             @Override

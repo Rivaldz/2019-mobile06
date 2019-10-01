@@ -11,8 +11,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import id.ac.polinema.idealbodyweight.R;
+import id.ac.polinema.idealbodyweight.util.BodyMassIndex;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -23,7 +25,7 @@ import id.ac.polinema.idealbodyweight.R;
 public class BodyMassIndexFragment extends Fragment {
 
     private OnFragmentInteractionListener mListener;
-    private EditText massText, heightText;
+//    private EditText massText, heightText;
 
     public BodyMassIndexFragment() {
         // Required empty public constructor
@@ -35,11 +37,24 @@ public class BodyMassIndexFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view  = inflater.inflate(R.layout.fragment_body_mass_index, container, false);
-        massText = view.findViewById(R.id.editTextYourMass) ;
-        heightText = view.findViewById(R.id.editYourHeight);
+        final EditText massText = view.findViewById(R.id.editTextYourMass) ;
+        final EditText heightText = view.findViewById(R.id.editYourHeight);
 
         Button calculateButton = view.findViewById(R.id.bmiButtonCalculate);
-        
+        calculateButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (mListener != null){
+                    String massString = massText.getText().toString();
+                    String heightString = heightText.getText().toString();
+                    int mass = Integer.parseInt(massString);
+                    int height = Integer.parseInt(heightString);
+                    BodyMassIndex bodymassindex = new BodyMassIndex(height,mass);
+                    mListener.onCalculateBodyMassIndex(bodymassindex.getIndex());
+
+               }
+            }
+        });
 
         return view;
     }
