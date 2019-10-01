@@ -49,5 +49,41 @@
             app:layout_constraintEnd_toStartOf="@+id/guideline4"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+        <EditText
+            android:id="@+id/editTextYourMass"
+            android:layout_width="270dp"
+            android:layout_height="37dp"
+            android:layout_marginTop="9dp"
+            android:ems="10"
+            android:hint="Input Your Mass (kg)"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.16"
+            app:layout_constraintStart_toStartOf="@+id/guideline4"
+            app:layout_constraintTop_toBottomOf="@+id/viewBMI" />
+
+        <EditText
+            android:id="@+id/editYourHeight"
+            android:layout_width="270dp"
+            android:layout_height="37dp"
+            android:layout_marginTop="14dp"
+            android:ems="10"
+            android:hint="Input Your Height (cm)"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.147"
+            app:layout_constraintStart_toStartOf="@+id/guideline4"
+            app:layout_constraintTop_toBottomOf="@id/editTextYourMass" />
+
+        <Button
+            android:id="@+id/bmiButtonCalculate"
+            android:layout_width="374dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="32dp"
+            android:text="calculate"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editYourHeight" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

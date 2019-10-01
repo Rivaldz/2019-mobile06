@@ -9,6 +9,8 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
 
 import id.ac.polinema.idealbodyweight.R;
 
@@ -21,6 +23,7 @@ import id.ac.polinema.idealbodyweight.R;
 public class BodyMassIndexFragment extends Fragment {
 
     private OnFragmentInteractionListener mListener;
+    private EditText massText, heightText;
 
     public BodyMassIndexFragment() {
         // Required empty public constructor
@@ -32,6 +35,13 @@ public class BodyMassIndexFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view  = inflater.inflate(R.layout.fragment_body_mass_index, container, false);
+        massText = view.findViewById(R.id.editTextYourMass) ;
+        heightText = view.findViewById(R.id.editYourHeight);
+
+        Button calculateButton = view.findViewById(R.id.bmiButtonCalculate);
+        
+
+        return view;
     }
 
     // TODO: Rename method, update argument and hook method into UI event

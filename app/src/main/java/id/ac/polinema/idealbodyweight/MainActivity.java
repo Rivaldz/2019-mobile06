@@ -9,6 +9,7 @@ import android.view.MenuItem;
 import android.widget.Button;
 
 import id.ac.polinema.idealbodyweight.fragments.AboutFragment;
+import id.ac.polinema.idealbodyweight.fragments.BodyMassIndexFragment;
 import id.ac.polinema.idealbodyweight.fragments.BrocaIndexFragment;
 import id.ac.polinema.idealbodyweight.fragments.MenuFragment;
 import id.ac.polinema.idealbodyweight.fragments.ResultFragment;
@@ -16,7 +17,8 @@ import id.ac.polinema.idealbodyweight.fragments.ResultFragment;
 public class MainActivity extends AppCompatActivity implements
 		MenuFragment.OnFragmentInteractionListener,
 		BrocaIndexFragment.OnFragmentInteractionListener,
-		ResultFragment.OnFragmentInteractionListener {
+		ResultFragment.OnFragmentInteractionListener,
+		BodyMassIndexFragment.OnFragmentInteractionListener {
 
 	// Deklarasikan atribut Fragment di sini
 	private AboutFragment aboutFragment ;
@@ -86,6 +88,11 @@ public class MainActivity extends AppCompatActivity implements
 		getSupportFragmentManager().beginTransaction()
 				.replace(R.id.fragment_container, brocaIndexFragment)
 				.commit();
+
+	}
+
+	@Override
+	public void onCalculateBodyMassIndex(float index) {
 
 	}
 }
