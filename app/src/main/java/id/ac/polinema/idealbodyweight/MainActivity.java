@@ -82,7 +82,7 @@ public class MainActivity extends AppCompatActivity implements
 
 	@Override
 	public void onCalculateBrocaIndexClickerd(float index) {
-		resultFragment.setInformation(String.format(null,index));
+		resultFragment.setInformation(String.format("Your ideal weight is %.2f",index));
 		getSupportFragmentManager().beginTransaction()
 				.replace(R.id.fragment_container,resultFragment)
 				.commit();
@@ -99,7 +99,7 @@ public class MainActivity extends AppCompatActivity implements
 
 	@Override
 	public void onCalculateBodyMassIndex(float index) {
-		resultFragment.setInformation(String.format("Your BMI is %.2f kg", index));
+		resultFragment.setInformation(String.format(" Your BMI is %.2f", index));
 		getSupportFragmentManager().beginTransaction()
 				.replace(R.id.fragment_container,resultFragment)
 				.commit();

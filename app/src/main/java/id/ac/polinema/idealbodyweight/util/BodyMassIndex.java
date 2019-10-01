@@ -20,7 +20,7 @@ public class BodyMassIndex {
         return index;
     }
     private float calcuate(){
-        float calculate = (mass / (height * height));
+        float calculate = (100*100*mass)/(height*height);
         return  calculate;
 
         }

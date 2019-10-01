@@ -1,7 +1,7 @@
 package id.ac.polinema.idealbodyweight.util;
 
 public class BrocaIndex {
-    public  static final int MALE = 0;
+    public  static final int MALE = 60;
     public  static final int FEMALE = 1;
 
     private int gender;

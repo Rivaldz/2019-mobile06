@@ -48,7 +48,9 @@ public class ResultFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 if (mListener != null){
+//                    if ()
                     mListener.onTryAgainButtonClicked("BrocaIndex");
+//                    mListener.onTryAgainButtonClicked("BodyMassIndex");
                 }
             }
         });
