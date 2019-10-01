@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity implements
 	private AboutFragment aboutFragment ;
 	private MenuFragment menuFragment;
 	private BrocaIndexFragment brocaIndexFragment;
-	private  ResultFragment resultFragment;
+	private ResultFragment resultFragment;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +33,7 @@ public class MainActivity extends AppCompatActivity implements
 		getSupportFragmentManager().beginTransaction()
 				.replace(R.id.fragment_container, menuFragment)
 				.commit();
+
 		brocaIndexFragment = new BrocaIndexFragment();
 		resultFragment = new ResultFragment();
 
@@ -62,6 +63,7 @@ public class MainActivity extends AppCompatActivity implements
 	public void onBrocaIndexButtonClicked() {
 		getSupportFragmentManager().beginTransaction()
 				.replace(R.id.fragment_container, brocaIndexFragment)
+				.addToBackStack(null)
 				.commit();
 	}
 
